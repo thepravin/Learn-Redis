@@ -3,3 +3,11 @@ docker ps ---> to get container id
 docker exec -it <container_id> bash ---> to enter into container
 
 redis-cli (enter key) --> enter actual redis container_id
+
+
+
+Possibility's of using redis : 
+1. Reduce Read pressure of DB
+2. Temp data expire
+3. Shared counter
+4. Background jobs

@@ -5,4 +5,22 @@ services:
     ports:
       - "6379:6379"   # Redis port
       - "8001:8001"   # Redis Insight web UI port
-    
+    volumes:
+      - redis-data-learning:/data
+  
+  mongo:
+    image: mongo:7
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: learn_redis_mongo_db
+    volumes:
+      - mongo-data:/data/db
+
+
+volumes:
+  redis-data-learning:
+  mongo-data:
+
+
